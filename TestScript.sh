@@ -1,6 +1,11 @@
 #!/bin/bash
 echo "Test $1 started"
 full_path="/mnt$2"
+if [[ -z $2 ]]
+then
+  echo "Ypu didn't write anything"
+  exit 1
+fi
 if [[ -d $full_path ]]
 then
   echo "Test $1 directory successfully opened"
